@@ -1,0 +1,16 @@
+# Ignore database file
+db.sqlite3
+
+# Ignore compiled Python bytecode
+*.pyc
+__pycache__/
+
+# Ignore migrations files
+**/migrations/*.py
+**/migrations/__pycache__/
+**/__pycache__/*
+# Ignore upload directory
+uploads/
+
+
+fleeticket/__pycache__/

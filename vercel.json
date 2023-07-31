@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "fleeticket/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "fleeticket/wsgi.py"
+    }
+  ]
+}
