@@ -160,6 +160,6 @@ REST_FRAMEWORK = {
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/uploads/'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app', 'fleeticket-service.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app', 'fleeticket-service.onrender.com', 'fleeticket.onrender.com']
 
 WSGI_APPLICATION = 'fleeticket.wsgi.app'
