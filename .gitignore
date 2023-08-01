@@ -10,7 +10,7 @@ __pycache__/
 **/migrations/__pycache__/
 **/__pycache__/*
 # Ignore upload directory
-uploads/
+#uploads/
 
 
 fleeticket/__pycache__/
