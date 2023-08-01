@@ -15,6 +15,9 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+import dj_database_url
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -92,17 +95,19 @@ WSGI_APPLICATION = 'fleeticket.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#    'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'qCBLJmarcTp3H26se2Y3',
+#         'HOST': 'containers-us-west-200.railway.app',
+#         'PORT': '6684',
+#     } 
+# }
 DATABASES = {
-   'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'qCBLJmarcTp3H26se2Y3',
-        'HOST': 'containers-us-west-200.railway.app',
-        'PORT': '6684',
-    } 
+   'default': dj_database_url.parse("postgres://cmahdi:EMA9how05ZydzczeM2sprIrN95rGsEz5@dpg-cj4f92d9aq047cccc0k0-a.frankfurt-postgres.render.com/fleeticketdb")
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
