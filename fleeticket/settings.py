@@ -62,6 +62,8 @@ ROOT_URLCONF = 'fleeticket.urls'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    'https://fleeticket-client-ql4866mou-medimon.vercel.app/login',
+    'https://fleeticket.vercel.app/login'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
