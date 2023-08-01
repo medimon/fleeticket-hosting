@@ -28,7 +28,6 @@ SECRET_KEY = 'django-insecure-mf8-r!0-#btfg_ylucflco@i@x&y#i(0$q6%-qs!_f)2l#gsal
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -161,6 +160,6 @@ REST_FRAMEWORK = {
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/uploads/'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app', 'fleeticket-service.onrender.com']
 
 WSGI_APPLICATION = 'fleeticket.wsgi.app'
