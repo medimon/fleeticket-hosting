@@ -58,7 +58,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'fleeticket.urls'
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
 # CORS_ALLOWED_ORIGINS = [
 #     "https://fleeticket-static.onrender.com"
 # ]
@@ -70,9 +70,9 @@ CORS_ORIGIN_ALLOW_ALL = True
 #     'https://fleeticket.vercel.app'
 # ]
 
-CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOW_CREDENTIALS = True
 
-CORS_EXPOSE_HEADERS = ['set-cookie']
+# CORS_EXPOSE_HEADERS = ['set-cookie']
 
 CSRF_TRUSTED_ORIGINS = [
     "https://fleeticket-static.onrender.com"
