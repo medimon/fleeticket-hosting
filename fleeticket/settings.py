@@ -170,6 +170,7 @@ CORS_EXPOSE_HEADERS = ['set-cookie']
 
 CSRF_TRUSTED_ORIGINS = [
     "https://fleeticket-static.onrender.com"
+    "https://fleeticket-static.onrender.com/"
 ]
 
 CSRF_COOKIE_SECURE = True
