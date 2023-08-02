@@ -19,7 +19,6 @@ from django.views.decorators.csrf import csrf_exempt
 
 # from .forms import UploadFileForm
 
-@csrf_exempt
 @api_view(['GET', 'POST'])
 # def user_list_create(request):
 def UserListCreateView(request):
@@ -38,7 +37,6 @@ def UserListCreateView(request):
             return Response(serializer.data, status=201)
         return Response(serializer.errors, status=400)
 
-@csrf_exempt
 class LoginView(views.APIView):
     def post(self, request):
         username = request.data.get('username')
@@ -51,18 +49,15 @@ class LoginView(views.APIView):
         else:
             return Response({'message': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
-@csrf_exempt
 class TicketViewSet(viewsets.ModelViewSet):
     queryset = Ticket.objects.all()
     serializer_class = TicketSerializer
 
-@csrf_exempt
 # class TicketListCreateView(generics.ListCreateAPIView):
 class TicketListCreateView(viewsets.ModelViewSet):
     queryset = Ticket.objects.all()
     serializer_class = TicketSerializer
 
-@csrf_exempt
 class TicketRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Ticket.objects.all()
     serializer_class = TicketSerializer
@@ -79,7 +74,6 @@ class TicketRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
         serializer.save()
         return Response(serializer.data)
 
-@csrf_exempt
 @api_view(['GET', 'POST'])
 @login_required
 def ticket_list(request):
@@ -136,7 +130,6 @@ def ticket_list(request):
             )
         return JsonResponse({'message': 'Ticket created successfully', 'ticket_id': ticket.id})
 
-@csrf_exempt
 class LogoutView(APIView):
     # permission_classes = [IsAuthenticated]
 

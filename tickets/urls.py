@@ -11,13 +11,13 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     # path('rest/', include(router.urls)),
-    path('login/', LoginView, name='login'),
+    path('login/', LoginView.as_view(), name='login'),
     # path('users/', UserListCreateView.as_view(), name='users')
     path('users/', UserListCreateView, name='users'),
     # path('tickets/', TicketListCreateView.as_view(), name='ticket-list-create'),
     path('tickets/', ticket_list, name='ticket-list-create'),
-    path('tickets/<int:pk>/', TicketRetrieveUpdateDestroyView, name='ticket-retrieve-update-destroy'),
-    path('logout/', LogoutView, name='logout'),
+    path('tickets/<int:pk>/', TicketRetrieveUpdateDestroyView.as_view(), name='ticket-retrieve-update-destroy'),
+    path('logout/', LogoutView.as_view(), name='logout'),
 ] 
 
 urlpatterns += staticfiles_urlpatterns()
