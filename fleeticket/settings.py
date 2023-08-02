@@ -162,17 +162,6 @@ ALLOWED_HOSTS = ["fleeticket.onrender.com", "fleeticket-static.onrender.com",".o
 # CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS = [
     "https://fleeticket-static.onrender.com",
-    "https://fleeticket-static.onrender.com/",
-    "https://fleeticket.vercel.app",
-    "https://fleeticket.vercel.app/",
-    "https://fleeticket.onrender.com",
-    "https://fleeticket.onrender.com/",
-    "https://fleeticket-client-o10b1on69-medimon.vercel.app/login",
-    "https://fleeticket-client-o10b1on69-medimon.vercel.app",
-    ".vercel.app",
-    ".vercel.app/",
-    "onrender.app"
-    "onrender.app/"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -182,3 +171,8 @@ CORS_EXPOSE_HEADERS = ['set-cookie']
 CSRF_TRUSTED_ORIGINS = [
     "https://fleeticket-static.onrender.com"
 ]
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
