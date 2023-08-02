@@ -74,6 +74,7 @@ class TicketRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
         serializer.save()
         return Response(serializer.data)
 
+@csrf_exempt
 @api_view(['GET', 'POST'])
 @login_required
 def ticket_list(request):
