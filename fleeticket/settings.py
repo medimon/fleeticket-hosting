@@ -173,6 +173,8 @@ CSRF_TRUSTED_ORIGINS = [
     "https://fleeticket-static.onrender.com/"
 ]
 
+CORS_ORIGIN_WHITELIST = ['https://fleeticket.onrender.com']
+
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
