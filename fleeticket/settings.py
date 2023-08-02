@@ -58,25 +58,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'fleeticket.urls'
 
-# CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOWED_ORIGINS = [
-    "https://fleeticket-static.onrender.com/"
-]
 
 
-# CORS_ALLOWED_ORIGINS = [
-#     'http://localhost:3000',
-#     'https://fleeticket-client-ql4866mou-medimon.vercel.app',
-#     'https://fleeticket.vercel.app'
-# ]
-
-CORS_ALLOW_CREDENTIALS = True
-
-CORS_EXPOSE_HEADERS = ['set-cookie']
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://fleeticket-static.onrender.com"
-]
 
 TEMPLATES = [
     {
@@ -166,7 +149,26 @@ REST_FRAMEWORK = {
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/uploads/'
 
-ALLOWED_HOSTS = ["fleeticket.onrender.com", "fleeticket-static.onrender.com",".onrender.com"]
-# ALLOWED_HOSTS = ['*']
 
 WSGI_APPLICATION = 'fleeticket.wsgi.app'
+
+
+
+
+
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["fleeticket.onrender.com", "fleeticket-static.onrender.com",".onrender.com",".vercel.app"]
+
+# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    "https://fleeticket-static.onrender.com/",
+    'https://fleeticket.vercel.app/'
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_EXPOSE_HEADERS = ['set-cookie']
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://fleeticket-static.onrender.com"
+]
