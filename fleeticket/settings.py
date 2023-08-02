@@ -162,7 +162,15 @@ ALLOWED_HOSTS = ["fleeticket.onrender.com", "fleeticket-static.onrender.com",".o
 # CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS = [
     "https://fleeticket-static.onrender.com",
-    'https://fleeticket.vercel.app'
+    "https://fleeticket-static.onrender.com/",
+    "https://fleeticket.vercel.app",
+    "https://fleeticket.vercel.app/",
+    "https://fleeticket.onrender.com",
+    "https://fleeticket.onrender.com/",
+    ".vercel.app",
+    ".vercel.app/",
+    "onrender.app"
+    "onrender.app/"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
