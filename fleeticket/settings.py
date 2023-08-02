@@ -167,6 +167,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://fleeticket.vercel.app/",
     "https://fleeticket.onrender.com",
     "https://fleeticket.onrender.com/",
+    "https://fleeticket-client-o10b1on69-medimon.vercel.app/login",
+    "https://fleeticket-client-o10b1on69-medimon.vercel.app",
     ".vercel.app",
     ".vercel.app/",
     "onrender.app"
