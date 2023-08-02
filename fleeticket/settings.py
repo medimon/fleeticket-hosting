@@ -166,7 +166,7 @@ REST_FRAMEWORK = {
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/uploads/'
 
-ALLOWED_HOSTS = ["https://fleeticket.onrender.com"]
+ALLOWED_HOSTS = ["fleeticket.onrender.com"]
 # ALLOWED_HOSTS = ['*']
 
 WSGI_APPLICATION = 'fleeticket.wsgi.app'
