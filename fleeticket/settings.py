@@ -60,7 +60,7 @@ ROOT_URLCONF = 'fleeticket.urls'
 
 # CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS = [
-    "https://fleeticket.vercel.app/",
+    ".onrender.com"
 ]
 
 
@@ -75,8 +75,7 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_EXPOSE_HEADERS = ['set-cookie']
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:3000',
-    'https://fleeticket.vercel.app'
+    ".onrender.com"
 ]
 
 TEMPLATES = [
@@ -167,7 +166,7 @@ REST_FRAMEWORK = {
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/uploads/'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app', 'fleeticket-service.onrender.com', 'fleeticket.onrender.com']
+ALLOWED_HOSTS = [".onrender.com"]
 # ALLOWED_HOSTS = ['*']
 
 WSGI_APPLICATION = 'fleeticket.wsgi.app'
