@@ -158,11 +158,11 @@ WSGI_APPLICATION = 'fleeticket.wsgi.app'
 
 
 # ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ["localhost","fleeticket.onrender.com", "fleeticket-static.onrender.com",".onrender.com",".vercel.app"]
+ALLOWED_HOSTS = ["localhost","fleeticket.onrender.com",".onrender.com",".vercel.app"]
 
 # CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS = [
-    "https://fleeticket-static.onrender.com",
+    "https://fleeticket.onrender.com",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -177,7 +177,7 @@ CORS_EXPOSE_HEADERS = ['set-cookie']
 #     ".onrender.com",
 # ]
 
-CORS_ORIGIN_WHITELIST = ['https://fleeticket-static.onrender.com','fleeticket-static.onrender.com' ]
+CORS_ORIGIN_WHITELIST = ['https://fleeticket.onrender.com','fleeticket.onrender.com' ]
 
 # CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
