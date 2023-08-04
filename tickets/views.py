@@ -16,6 +16,7 @@ import json
 
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
 # from .forms import UploadFileForm
 
@@ -37,6 +38,7 @@ def UserListCreateView(request):
             return Response(serializer.data, status=201)
         return Response(serializer.errors, status=400)
 
+@method_decorator(csrf_exempt, name='dispatch')
 class LoginView(views.APIView):
     def post(self, request):
         username = request.data.get('username')

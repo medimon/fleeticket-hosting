@@ -50,7 +50,8 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'tickets.middle.DisableCSRFMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -168,13 +169,13 @@ CORS_ALLOW_CREDENTIALS = True
 
 CORS_EXPOSE_HEADERS = ['set-cookie']
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://fleeticket-static.onrender.com"
-    "https://fleeticket-static.onrender.com/"
-    "fleeticket-static.onrender.com",
-    "onrender.com",
-    ".onrender.com",
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     "https://fleeticket-static.onrender.com"
+#     "https://fleeticket-static.onrender.com/"
+#     "fleeticket-static.onrender.com",
+#     "onrender.com",
+#     ".onrender.com",
+# ]
 
 CORS_ORIGIN_WHITELIST = ['https://fleeticket-static.onrender.com','fleeticket-static.onrender.com' ]
 
